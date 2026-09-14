@@ -17,7 +17,7 @@ $series = $stmt->fetchAll();
 <body class="px-5">
     <header class="flex flex-row items-center py-2 justify-between">
         <p class="font-bold text-sky-500 text-3xl">My Series Companion</p>
-        <a class="cursor-pointer bg-sky-500 p-2 rounded-xl" href="form_ajout.php">Ajouter une série</a>
+        <a class="cursor-pointer bg-sky-500 p-2 rounded-xl" href="form_ajout_serie.php">Ajouter une série</a>
     </header>
    
     <?php if (empty($series)): ?>
@@ -60,7 +60,7 @@ $series = $stmt->fetchAll();
                     Sortie : <?= htmlspecialchars($serie['date_sortie']) ?>
                 </div>
 
-                <a class="bg-base-400 rounded-xl">+ En savoir plus</a>
+                <a href="liste_saison.php?serie_id=<?= (int) $serie['id'] ?>" class="bg-base-400 rounded-xl">+ En savoir plus</a>
 
             </div>
 
