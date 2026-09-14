@@ -48,7 +48,7 @@ $saisons = $stmt->fetchAll();
 
                 <!-- NOM DE LA saison -->
                 <div>
-                    <h2 class="text-xl font-bold text-primary"><?= htmlspecialchars($saison['nom']) ?></h2>
+                    <h2 class="text-xl font-bold text-sky-500"><?= htmlspecialchars($saison['nom']) ?></h2>
                 </div>
 
                 <!-- RESUME DE LA saison -->
@@ -61,7 +61,7 @@ $saisons = $stmt->fetchAll();
                     Sortie : <?= htmlspecialchars($saison['date_sortie']) ?>
                 </div>
 
-                <a href="liste_saison.php" class="bg-base-400 rounded-xl">+ En savoir plus</a>
+                <a href="liste_episode.php?saison_id=<?= (int) $saison['id'] ?>" class="bg-base-400 rounded-xl">Voir les épisodes</a>
 
             </div>
 
