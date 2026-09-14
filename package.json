@@ -1,0 +1,27 @@
+{
+  "name": "myseriecompanion",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:css": "npx @tailwindcss/cli -i ./src/app.css -o public/output.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Treaxy44/MySerieCompanion.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Treaxy44/MySerieCompanion/issues"
+  },
+  "homepage": "https://github.com/Treaxy44/MySerieCompanion#readme",
+  "dependencies": {
+    "@tailwindcss/cli": "^4.3.3",
+    "daisyui": "^5.7.37",
+    "tailwindcss": "^4.3.3"
+  }
+}
