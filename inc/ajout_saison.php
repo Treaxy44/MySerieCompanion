@@ -10,7 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'){
     $date_sortie = trim($_POST['date'] ?? '');
     $serie_id = filter_input(INPUT_POST, 'serie_id', FILTER_VALIDATE_INT);
 
-    if(!empty($nom) && !empty($date_sortie) && $serie_id !== false && $serie_id !== null){
+    if (!empty($nom) && !empty($date_sortie) && $serie_id !== false && $serie_id !== null) {
 
         $sql = "INSERT INTO saison (nom, vignette, date_sortie, resume, serie_id) VALUES (:nom, :vignette, :date_sortie, :resume, :serie_id)";
 
@@ -29,5 +29,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'){
         exit;
     }
     }
+
+    http_response_code(400);
+    exit('Les champs nom, date de sortie et série sont obligatoires.');
 }
+
+http_response_code(405);
+exit('Méthode non autorisée.');
 ?>
