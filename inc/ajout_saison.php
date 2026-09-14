@@ -25,7 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'){
     ]);
 
     if($succes){
-        header('Location: ../public/liste_saison.php?serie_id=' . $serie_id);
+        header('Location: ../public/liste_saison.php');
         exit;
     }
     }
