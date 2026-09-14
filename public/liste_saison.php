@@ -18,7 +18,7 @@ $saisons = $stmt->fetchAll();
 <body class="px-5">
     <header class="flex flex-row items-center py-2 justify-between">
         <p class="font-bold text-sky-500 text-3xl">My saisons Companion</p>
-        <a class="cursor-pointer bg-sky-500 p-2 rounded-xl" href="form_ajout_saison.php">Ajouter une saisons</a>
+        <a class="cursor-pointer bg-sky-500 p-2 rounded-xl" href="form_ajout_saison.php?serie_id=<?= (int) $serieId ?>">Ajouter une saison</a>
     </header>
    
     <?php if (empty($saisons)): ?>

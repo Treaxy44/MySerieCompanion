@@ -27,6 +27,9 @@ $series = $stmt->fetchAll();
     
     <label>Résumé de la saison</label>
     <textarea placeholder="Résumé..." class="textarea border-sky-500" name="resume"></textarea>
+
+    <label>Date de sortie</label>
+    <input type="date" class="input border-sky-500" name="date" required />
     
     <select name="serie_id" class="select border-sky-500" required>
         <option value="" disabled selected>-- Choisir une série --</option>
